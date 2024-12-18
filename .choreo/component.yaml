@@ -1,7 +1,7 @@
 name: NodejsRestAPI
 version: 1.0.0
 description: "API RESTful para gerenciamento de itens em Node.js"
-type: rest
+type: REST
 language: nodejs
 configs:
   - name: PORT
