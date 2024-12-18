@@ -1,12 +1,10 @@
-name: NodejsRestAPI
-version: 1.0.0
-description: "API RESTful para gerenciamento de itens em Node.js"
-type: REST
-language: nodejs
-configs:
-  - name: PORT
-    value: 3000
-    description: "Porta onde a aplicação será executada"
+schemaVersion: 1.0 
+ # Example endpoint configuration
+endpoints:
+- name: my-service-endpoint
+  service:
+     port: <SERVICE_PORT>
+  type: REST
 resources:
   - name: items
     path: /items
