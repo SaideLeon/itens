@@ -1,0 +1,50 @@
+name: NodejsRestAPI
+version: 1.0.0
+description: "API RESTful para gerenciamento de itens em Node.js"
+type: rest
+language: nodejs
+configs:
+  - name: PORT
+    value: 3000
+    description: "Porta onde a aplicação será executada"
+resources:
+  - name: items
+    path: /items
+    methods:
+      - name: list
+        method: GET
+        path: /
+        description: "Listar todos os itens"
+      - name: retrieve
+        method: GET
+        path: /{id}
+        description: "Obter item específico pelo ID"
+      - name: create
+        method: POST
+        path: /
+        description: "Criar um novo item"
+      - name: update
+        method: PUT
+        path: /{id}
+        description: "Atualizar item existente"
+      - name: delete
+        method: DELETE
+        path: /{id}
+        description: "Excluir um item"
+components:
+  schemas:
+    Item:
+      type: object
+      properties:
+        id:
+          type: string
+          description: "ID único do item"
+        name:
+          type: string
+          description: "Nome do item"
+        description:
+          type: string
+          description: "Descrição do item"
+        price:
+          type: number
+          description: "Preço do item"
